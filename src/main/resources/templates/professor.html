@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" role="form" th:action="@{/professor}" th:object="${User}">
+    <input type="text" id="name" name="name" th:value="${user.getName()}">
+    <br>
+    <input type="hidden" id="email" name="email" th:value="${user.getEmail()}">
+    <br>
+    <input type="hidden" id="id" name="id" th:value="${user.getId()}">
+    <br>
+
+    <button type="submit">Atualizar</button>
+</form>
+</body>
+</html>

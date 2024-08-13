@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registar Curso</title>
+</head>
+<body>
+<form method="post" role="form" th:action="@{/registerCurso}" th:object="${Curso}">
+    <label for="Nome">Nome do curso:</label>
+    <input type="text" name="Nome" id="Nome"/>
+    <br>
+    <label for="datei">Nome do curso:</label>
+    <input type="datetime-local" name="datei" id="datei"/>
+    <br>
+    <label for="datef">Nome do curso:</label>
+    <input type="datetime-local" name="datef" id="datef"/>
+    <button type="submit">Registar</button>
+</form>
+</body>
+</html>

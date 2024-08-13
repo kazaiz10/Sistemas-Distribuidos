@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remover</title>
+</head>
+<body>
+<table>
+    <tr th:each="user: ${users}">
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getName()}"></td>
+        <td th:text="${user.getRoles().get(0).getName()}"></td>
+        <td th:text="${user.getCurso().getNome()}"></td>
+    </tr>
+</table>
+<form method="post" role="form" th:action="@{/update}">
+    <label for="remove">Nome do utilizador e do novo curso</label>
+    <input type="text" id="remove" name="remove"/>
+    <input type="text" id="curso" name="curso"/>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
